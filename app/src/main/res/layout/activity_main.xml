@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/left"
+        android:layout_width="190dp"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/team_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:paddingTop="16dp"
+            android:text="Team A"
+            android:textColor="#616161"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/team_a_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:paddingTop="16dp"
+            android:text="0"
+            android:textColor="#000000"
+            android:textSize="56sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/team_a" />
+
+        <Button
+            android:id="@+id/points3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="24dp"
+            android:onClick="plusThreeForTeamA"
+            android:text="+3 Points"
+            app:layout_constraintTop_toBottomOf="@id/team_a_score" />
+
+        <Button
+            android:id="@+id/points2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="8dp"
+            android:onClick="plusTwoForTeamA"
+            android:text="+2 Points"
+            app:layout_constraintTop_toBottomOf="@id/points3" />
+
+        <Button
+            android:id="@+id/free_throw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="8dp"
+            android:onClick="plusOneForTeamA"
+            android:text="Free Throw"
+            app:layout_constraintTop_toBottomOf="@id/points2" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/right"
+        android:layout_width="190dp"
+        android:layout_height="match_parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/team_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:paddingTop="16dp"
+            android:text="Team B"
+            android:textColor="#616161"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/team_b_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:paddingTop="16dp"
+            android:text="0"
+            android:textColor="#000000"
+            android:textSize="56sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/team_b" />
+
+        <Button
+            android:id="@+id/points3_b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="24dp"
+            android:onClick="plusThreeForTeamB"
+            android:text="+3 Points"
+            app:layout_constraintTop_toBottomOf="@id/team_b_score" />
+
+        <Button
+            android:id="@+id/points2_b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="8dp"
+            android:onClick="plusTwoForTeamB"
+            android:text="+2 Points"
+            app:layout_constraintTop_toBottomOf="@id/points3_b" />
+
+        <Button
+            android:id="@+id/free_throw_b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="8dp"
+            android:onClick="plusOneForTeamB"
+            android:text="Free Throw"
+            app:layout_constraintTop_toBottomOf="@id/points2_b" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_marginBottom="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="reset"
+        android:text="Reset"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</android.support.constraint.ConstraintLayout>
